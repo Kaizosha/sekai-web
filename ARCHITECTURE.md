@@ -45,9 +45,10 @@ temporary query parameter. Direct visits use Sekai's canonical top-right slot.
 - `assets/scripts/product-continuation.js` handles the static product-slot
   handoff and URL cleanup.
 
-The visible Kaizōsha mark is semantic HTML styled with `brand.css`. `icon.png`
-is used only where a browser, operating system, PWA, or metadata consumer
-requires a raster image.
+The visible Kaizōsha mark is semantic HTML styled with `brand.css`. `icon.svg`
+keeps the Japanese glyphs as real text for supporting browsers; `icon.png` is
+used only where an operating system, PWA, or metadata consumer requires a
+raster image.
 
 ## Zero-build hosting
 

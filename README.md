@@ -72,12 +72,13 @@ Cloudflare Pages deployment remain independent.
 Product-specific continuation behavior stays in
 `assets/styles/product-continuation.css` and
 `assets/scripts/product-continuation.js`. Visible branding always uses the
-constructed HTML/CSS mark. The shared Kaizōsha raster icon is reserved for the
-favicon, Apple touch icon, manifest, and machine-readable metadata.
+constructed HTML/CSS mark. The shared SVG keeps its Japanese glyphs as real
+text for supporting browsers; the PNG is the Apple touch, PWA, and metadata
+fallback.
 
 ## Social preview
 
 Root metadata uses the purpose-built 1200 × 630 card at
-`assets/media/social/sekai-social-card.png`. Like the shared raster icon, it is
+`assets/media/social/sekai-social-card.png`. Like the shared icon files, it is
 used only where a metadata consumer requires an image; the visible website
 remains constructed HTML and CSS.

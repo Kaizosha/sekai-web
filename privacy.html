@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#101010" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f4f4ef" media="(prefers-color-scheme: light)">
+    <title>Privacy Notice — Sekai</title>
+    <meta name="description" content="How Sekai's offline core, optional location module, and host-provided geographic data behave.">
+    <meta name="author" content="Kaizōsha">
+    <meta name="publisher" content="Kaizōsha">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="Sekai">
+    <link rel="icon" type="image/png" sizes="1024x1024" href="/icon.png?v=20260820-compact-mark">
+    <link rel="apple-touch-icon" href="/icon.png?v=20260820-compact-mark">
+    <link rel="manifest" href="/site.webmanifest?v=20260820-sekai">
+    <link rel="canonical" href="https://sekai.kaizosha.org/privacy">
+    <meta property="og:title" content="Privacy Notice — Sekai">
+    <meta property="og:description" content="How Sekai's offline core, optional location module, and host-provided geographic data behave.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sekai.kaizosha.org/privacy">
+    <meta property="og:site_name" content="Sekai by Kaizōsha">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Privacy Notice — Sekai">
+    <meta name="twitter:description" content="How Sekai's offline core, optional location module, and host-provided geographic data behave.">
+    <meta name="twitter:site" content="@KaizoshaX">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="stylesheet" href="/assets/styles/markdown.css?v=20260820-shared">
+    <link rel="stylesheet" href="/assets/styles/product-continuation.css?v=20260820-sekai">
+    <script src="/assets/scripts/site-motion.js?v=20260818-dynamic-grid" defer></script>
+    <script src="/assets/scripts/document-navigation.js?v=20260814-scroll-gutter" defer></script>
+  </head>
+  <body id="top" data-page-family="document" data-page="privacy">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <main class="main" id="main-content" data-file="sekai-privacy.md" tabindex="-1">
+      <nav class="document-nav" aria-label="Document navigation">
+        <a class="document-back" href="/" aria-label="Back to Sekai">← Back</a>
+        <span>/ Sekai Privacy Notice</span>
+      </nav>
+
+      <section class="section" id="notice">
+        <header class="section-head"><h1 class="section-title">Sekai Privacy Notice</h1></header>
+        <div class="body-lines">
+          <p>This notice describes the behavior found in the current Sekai 1.1.0 package source. An application that embeds Sekai controls its own data sources, storage, networking, and permissions and must describe those practices separately.</p>
+          <p class="document-meta">Last updated: August 20, 2026</p>
+        </div>
+      </section>
+
+      <section class="section" id="core">
+        <header class="section-head"><h2 class="section-title">OFFLINE CORE</h2></header>
+        <div class="body-lines">
+          <p>Core Sekai renders from a bundled Natural Earth atlas. It does not require a network connection, account, API key, MapKit configuration, JavaScript, WebView, or location permission.</p>
+          <p>The current package includes no advertising, analytics, tracking, telemetry, cloud-sync, or crash-report upload integration. Core Sekai does not send atlas use, camera movement, layer content, or interaction data to Kaizōsha.</p>
+        </div>
+      </section>
+
+      <section class="section" id="host-data">
+        <header class="section-head"><h2 class="section-title">HOST-PROVIDED DATA</h2></header>
+        <div class="body-lines">
+          <p>A host application can provide annotations, routes, shapes, heat points, GeoJSON, and other layer values. Sekai processes these values within the host application and does not fetch or upload them itself.</p>
+          <p>The host application may independently download, store, sync, or share its own data. Those choices belong to the host application and are outside Sekai's runtime behavior.</p>
+        </div>
+      </section>
+
+      <section class="section" id="location">
+        <header class="section-head"><h2 class="section-title">OPTIONAL LOCATION MODULE</h2></header>
+        <div class="body-lines">
+          <p>SekaiKit does not link Core Location. Location support is provided by a separate optional SekaiLocation product that a host application must explicitly add.</p>
+          <p>The host supplies the platform usage description, requests when-in-use authorization, and controls when location updates start and stop. The module exposes the received coordinate and horizontal accuracy to that host and can turn the coordinate into a globe annotation. The host remains responsible for any later persistence, networking, or sharing of location data.</p>
+        </div>
+      </section>
+
+      <section class="section" id="persistence">
+        <header class="section-head"><h2 class="section-title">STATE AND PERSISTENCE</h2></header>
+        <div class="body-lines">
+          <p>Sekai exposes camera, style, feature, filter, and layer values to the host application. Some suitable values support Codable so the host may choose to persist them.</p>
+          <p>Sekai itself does not create a user account, analytics record, cloud profile, or application database. Any persistence added by the host application is governed by that application's privacy notice.</p>
+        </div>
+      </section>
+
+      <section class="section" id="installation">
+        <header class="section-head"><h2 class="section-title">INSTALLATION AND EXTERNAL SERVICES</h2></header>
+        <div class="body-lines">
+          <p>Adding Sekai through Xcode or Swift Package Manager requires those tools to retrieve the public package from GitHub. That installation traffic is handled by Apple, GitHub, and the user's network configuration, not by the Sekai runtime.</p>
+          <p>Links opened from this product website are handled by the destination website and browser.</p>
+        </div>
+      </section>
+
+      <section class="section" id="geography">
+        <header class="section-head"><h2 class="section-title">GEOGRAPHIC DATA LIMITS</h2></header>
+        <div class="body-lines">
+          <div class="document-warning" role="note" aria-label="Geographic data use disclaimer">
+            <strong>The bundled Natural Earth-derived data is intended for visualization.</strong>
+            Do not use it for navigation, surveying, legal-boundary determination, emergency decisions, or precision GIS work.
+          </div>
+          <p>Country aggregation, map units, and political-worldview classifications follow the bundled source and Sekai's documented filters. A host application is responsible for selecting and explaining any interpretation it presents to users.</p>
+        </div>
+      </section>
+
+      <section class="section" id="website">
+        <header class="section-head"><h2 class="section-title">PRODUCT WEBSITE</h2></header>
+        <div class="body-lines">
+          <p>This notice covers the Sekai package, not visits to sekai.kaizosha.org or kaizosha.org. Website visits are governed by the <a href="https://kaizosha.org/privacy">Kaizōsha website privacy policy</a>.</p>
+        </div>
+      </section>
+
+      <section class="section" id="changes">
+        <header class="section-head"><h2 class="section-title">CHANGES AND CONTACT</h2></header>
+        <div class="body-lines">
+          <p>If Sekai's package behavior changes, this notice will be updated to describe the changed release.</p>
+          <p>Questions about Sekai privacy can be sent through the <a href="https://kaizosha.org/contact">Kaizōsha contact page</a>. Suspected security issues should follow the repository's <a href="https://github.com/Kaizosha/Sekai/blob/main/SECURITY.md">security policy</a>.</p>
+        </div>
+      </section>
+
+      <footer class="document-footer">
+        <a href="/">Sekai</a>
+        <a href="/privacy" aria-current="page">Package Privacy</a>
+        <a href="https://kaizosha.org/privacy">Website Privacy</a>
+        <a href="#top">Back to top</a>
+      </footer>
+    </main>
+  </body>
+</html>

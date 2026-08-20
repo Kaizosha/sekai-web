@@ -1,0 +1,19 @@
+{
+  "name": "Sekai by Kaizōsha",
+  "short_name": "Sekai",
+  "description": "An offline-first native globe package for SwiftUI with a bundled Natural Earth atlas and composable geographic layers.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#101010",
+  "theme_color": "#101010",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
